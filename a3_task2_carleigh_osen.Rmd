@@ -138,7 +138,10 @@ In the code chunk below, starting from the `mpg` data create a new data frame ca
 
 ```{r}
 # Your code here: 
-
+mpg_model_class <- mpg %>% # Start with mpg
+  unite(col = model_class, # Create a new column called `model_class`
+        c(model, class), # That combines model and class columns
+        sep = "-") # Puts a dash (-) between the pieces
 
 ```
 
