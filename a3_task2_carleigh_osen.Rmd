@@ -97,7 +97,12 @@ Make sure to `View()` the resulting data frame (remember: run `View()` in the Co
 
 ```{r}
 # Your code here:
-
+sw_skin_sep <- starwars %>% # Start from starwars data
+  separate(col = skin_color, # Separate the `skin_color` column...
+           into = c("skin_1","skin_2"), # into 2 columns...
+           sep = ",", # Creating the separation at the first comma (,)
+           extra = "merge", # If there are additional commas, merge all into second column
+           remove = FALSE) # And do not remove the original column
 
 ```
 
