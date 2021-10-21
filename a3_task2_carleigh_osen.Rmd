@@ -56,7 +56,7 @@ Make sure to `View()` the resulting data frame (remember: run `View()` in the Co
 
 **Note: You should get a warning about one piece dropped. What happens to the name in Row 49, which contains two dashes? 
 
-**I didn't get a warning until I removed `warning = FALSE` from the global options in the setup chunk** The last name in row 49 gets discarded from the dataset. 
+*I didn't get a warning until I removed `warning = FALSE` from the global options in the setup chunk* The last name in row 49 gets discarded from the dataset. 
 
 ```{r}
 # Your code here: 
