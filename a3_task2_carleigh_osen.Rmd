@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r setup, include = TRUE, warning = FALSE, message = FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 # Attach packages
 library(tidyverse)
@@ -309,8 +309,8 @@ Note: If you add another condition within `case_when()` that is `TRUE ~ "some th
 # Your code here: 
 
 storms_danger <- storms %>%
-  mutate(danger = case_when(status == hurricane ~ "high",
-                            status == TRUE ~ "moderate"))
+  mutate(danger = case_when(status == "hurricane" ~ "high",
+                            TRUE ~ "moderate"))
 
 ```
 
